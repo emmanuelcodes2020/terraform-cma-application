@@ -6,13 +6,13 @@ This is terraform repo to create infra for CMA-application
 CREATING INFRASTRUCTURE FOR CMA APPLICATION
  1) Clone the project from the git repo 
  ```
- git clone git@gitlab.com:lamtech-cma/services/cma-application.git
+ git clone git@github.com:emmanuelcodes2020/terraform-cma-application.git
  ```
  2) Change directory to the Terraform infra directory
  3a) Use this command below to reconfigure initializiation for  the backend 
    
    ```
-   terraform init -reconfigure -backend-config bucket="cma-special-project" -backend-config key="major/dev/terraform.tfstate"
+    terraform init -reconfigure -backend-config bucket="global-cma-application" -backend-config key="global/cma/dev/terraform.tfstate" 
    ```
 
 3b) Use plan out instruction for terraform plan and specify the tfvar file 
