@@ -1,0 +1,25 @@
+# vscode
+.vscode
+
+#terraform
+*.terraform
+*.terraform/
+*.tfstate
+*.tfstate.*
+*.terraform.lock.hcl
+plan.out
+*.out
+
+#intellij
+.idea/
+*.iml
+
+#MacOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+#Ansible
+*.retry
+ansible.cfg
+ansible.log
