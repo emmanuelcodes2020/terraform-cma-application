@@ -1,5 +1,5 @@
-env              =  "dev"
-instance_type    =  "t3.medium"
+env              =  "uat"
+instance_type    =  "t3.large"
 key_name         =  "londonserver"
 subnet_ranges    =  ["subnet-02a9e5d00bbb8cc25", "subnet-0644c8c5d8ada7398", "subnet-04fb6726c16bdd4ca"]
 subnet_id        =  "subnet-0644c8c5d8ada7398"
