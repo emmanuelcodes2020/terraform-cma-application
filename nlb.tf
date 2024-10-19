@@ -1,5 +1,5 @@
 resource "aws_lb" "cma_nlb" {
-  name               = "cma-nlb"
+  name               = "cma-nlb-${var.env}"
   internal           = false
   load_balancer_type = var.load_balancer_type
   subnets            = var.subnet_ranges
@@ -26,7 +26,7 @@ protocol = "TCP"
 
 resource "aws_lb_target_group" "cma_tg" {
   target_type = var.target_type
-  name = "cma-tg"
+  name = "cma-tg-${var.env}"
   port = 8081
   protocol = "TCP"
   vpc_id = var.vpc_id

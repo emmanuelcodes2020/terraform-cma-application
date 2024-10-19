@@ -23,7 +23,7 @@ resource "aws_launch_template" "cma_lt" {
 }
 
 resource "aws_autoscaling_group" "cma_asg_group" {
-  name               = "CMA-ASG"
+  name               = "CMA-ASG-${var.env}"
   desired_capacity   = var.desired_capacity
   min_size           = var.min_size 
   max_size             = var.max_size
@@ -38,7 +38,7 @@ resource "aws_autoscaling_group" "cma_asg_group" {
   }
   tag {
     key                 = "Name"
-    value               = "CMA-Application"
+    value               = "cma-app-${var.env}"
     propagate_at_launch = true
   }
 }
