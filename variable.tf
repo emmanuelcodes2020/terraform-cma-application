@@ -76,6 +76,20 @@ variable "subnet_ranges" {
    
  }
 
+ variable "ebs_volume_size" {
+  default = 13
+  type = number
+   
+ }
+
+ variable "root_volume_size" {
+  default = 10
+  type = number
+   
+ }
+
+
+
  variable "device_name" {
    default =  "/dev/sdf"
    type = string
@@ -91,11 +105,7 @@ variable "subnet_ranges" {
    type = string
  }
 
- variable "domain_name" {
-  type = string
-  description = "domain"
-  default = "cma.globalfrontierlink.co.uk"
-}
+
 
 variable "volume_type" {
   type = string

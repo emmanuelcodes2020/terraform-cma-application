@@ -45,7 +45,7 @@ APPLICATION DEPLOYMENT USING ANSIBLE
 1) Clone the project from the git repo 
     
     ```
-    git clone git@gitlab.com:lamtech-cma/services/cma-application.git
+    git clone git@github.com:emmanuelcodes2020/terraform-cma-application.git
     ```
   
 2) Change directory to the Ansible-Playbook 
@@ -59,6 +59,6 @@ APPLICATION DEPLOYMENT USING ANSIBLE
 4) Run ansible playbook 
  
   ```
-  ansible-playbook -i aws_ec2.yml site.yml -b -u ec2-user --private-key=~/.ssh/lamtech.pem
+  ansible-playbook -i aws_ec2.yml site.yml -b -u ec2-user --private-key=~/.ssh/londonserver.pem
   ```
 
