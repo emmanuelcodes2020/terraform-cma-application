@@ -18,10 +18,30 @@ default_action {
 }
 
 load_balancer_arn = aws_lb.cma_nlb.arn
-port = 80
+port = 8081
 protocol = "TCP"
 
 }
+
+
+resource "aws_lb_listener" "cma_app_listener" {
+default_action {
+  type= "forward"
+  target_group_arn = aws_lb_target_group.cma_tg.arn
+}
+
+load_balancer_arn = aws_lb.cma_nlb.arn
+port = 443
+protocol = "TLS"
+ssl_policy = "ELBSecurityPolicy-TLS13-1-2-2021-06"
+certificate_arn = aws_acm_certificate.cma_acm_certificate.arn
+ depends_on        = [aws_lb_target_group.cma_tg]
+
+}
+
+
+
+
 
 
 resource "aws_lb_target_group" "cma_tg" {
